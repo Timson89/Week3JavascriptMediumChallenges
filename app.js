@@ -27,6 +27,7 @@ function filterOutFalsy(val1, val2) {
 
   // *** Simplified Again ***
 
+
   return (!val1 ? val1 : val2);
 }
 console.log(filterOutFalsy(true, 'Dog')); // -> Dog
@@ -270,3 +271,8 @@ console.log(removeFalsyValues([100, "", [], 0, null, undefined, "0", true, false
 
 // Q12. Truthy to true & Falsy to false.
 
+function convertToBoolean(arr) {
+
+  return arr.map(elem => !!elem) 
+}
+console.log(convertToBoolean([500, 0, "Timothy", "", []])) // -> [true, false, true, false, true]
